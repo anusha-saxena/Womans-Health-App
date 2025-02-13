@@ -1,14 +1,17 @@
 import mysql.connector
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-app = Flask(__name__)
+
+app = Flask(__name__, template_folder = 'templates', static_folder = 'static', static_url_path='/')
 CORS(app)
+
 DATABASE_CONFIG = {
     "host": "localhost",
     "user": "root",
     "password": "Akshatsaxena12#",
     "database": "flow_db"
 }
+
 try:
     conn = mysql.connector.connect(**DATABASE_CONFIG)
     cursor = conn.cursor()
@@ -18,13 +21,20 @@ except mysql.connector.Error as err:
 
 @app.route('/')
 def hello_world():
-    return {'message': 'Hello from Flask!'}
+    # Render the index template with a dynamic message
+    return render_template('index.html', message='Hello from Flask!')
 
 @app.route('/users', methods=['GET'])
 def get_users():
     cursor.execute("SELECT * FROM users")
     users = cursor.fetchall()
     return jsonify(users)
+
+@app.route('/')
+def index():
+    some_data = {"title": "Welcome to Grayscale!"}
+    return render_template('index.html', data=some_data)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grayscale Theme with Flask</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='css/grayscale.css') }}" rel="stylesheet">
+</head>
+
+<h1>{{ data.title }}</h1>
+
+<body>
+    <!-- Navigation and other content using Bootstrap -->
+
+    <!-- Example of image -->
+    <img src="{{ url_for('static', filename='img/example-image.jpg') }}" alt="Image Example">
+
+    <!-- Bootstrap and Custom JS -->
+    <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
+</body>
+
+</html>
