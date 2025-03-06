@@ -30,6 +30,10 @@ def get_users():
     users = cursor.fetchall()
     return jsonify(users)
 
+@app.route('/login.html', methods=['GET', 'POST'])
+def login():
+    return render_template('login.html')
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -37,6 +41,7 @@ def index():
 @app.route('/home')
 def home():
     return render_template('home.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
