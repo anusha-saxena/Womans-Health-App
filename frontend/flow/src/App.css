@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5em;
+  color: #ff66b2;
+  margin-bottom: 30px;
+}
+
+/* Layout */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.symptom-input {
+  width: 45%;
+  background-color: #ffe6f1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container {
+  width: 50%;
+}
+
+.custom-calendar {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.symptom-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.symptom-option {
+  background-color: #ff66b2;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.symptom-option.selected {
+  background-color: #ff3385;
+}
+
+.symptom-option:hover {
+  background-color: #ff3385;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.symptom-btn,
+.period-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.symptom-btn {
+  background-color: #ff66b2;
+  color: white;
+}
+
+.period-btn {
+  background-color: #ff80e1;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Symptom List */
+.symptom-list-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffe6f1;
+  border-radius: 12px;
+}
+
+.symptom-item {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #ff66b2;
+}
+
+.symptom-item strong {
+  font-weight: bold;
+}
